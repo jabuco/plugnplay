@@ -25,9 +25,6 @@
     "coverage": "istanbul check-coverage --statements 100 --lines 100 --branches 100 --functions 100 **/coverage.json",
     "test": "npm run build && npm run istanbul",
     "istanbul": "istanbul cover --print both node_modules/nodeunit/bin/nodeunit ./test",
-    "commitmsg": "validate-commit-msg",
-    "precommit": "npm run flow && npm run lint",
-    "prepush": "npm run test && npm run coverage",
     "semantic-release": "semantic-release",
     "postinstall": "npm run build",
     "flow": "flow",
@@ -78,5 +75,12 @@
   },
   "release": {
     "analyzeCommits": "semantic-release-conventional-commits"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": "npm run flow && npm run lint",
+      "pre-push": "npm run test && npm run coverage"
+    }
   }
 }
