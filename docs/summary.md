@@ -1,4 +1,7 @@
 ## Summary
+
+> This version contains fixes for windows and has updated dependencies opposed to the original one which seems quite a bit frozen right now.
+
 _Plug'n'Play_ is a simple plugin system that will allow you leverage polymorphism.
 
 **Example 1:** Imagine a service that needs to process some data and store it in S3. The piece that stores the data
@@ -7,7 +10,7 @@ filesystem and another that dumps the data in the console. This way you could us
 files to say:
 
 > OK, run the application locally but don't upload to S3 save to my disk so I can debug
-and inspect the end result.
+> and inspect the end result.
 
 You would only need to change `storePlugin` from `'s3'` to `'disk'`.
 
