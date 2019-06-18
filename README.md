@@ -1,13 +1,15 @@
-# plugnplay
+# @jabuco/plugnplay
 
 [![Mateu Aguiló Bosch (e0ipso)](https://img.shields.io/badge/♥-e0ipso-green.svg?style=flat-square)](http://mateuaguilo.com/)
-[![Travis](https://img.shields.io/travis/e0ipso/plugnplay.svg?style=flat-square)](https://travis-ci.org/e0ipso/plugnplay/)
-[![Coverage Status](https://img.shields.io/coveralls/github/e0ipso/plugnplay/master.svg?style=flat-square)](https://coveralls.io/github/e0ipso/plugnplay?branch=master)
-[![Last Commit](https://img.shields.io/github/last-commit/e0ipso/plugnplay.svg?style=flat-square)](https://github.com/e0ipso/plugnplay)
-[![David Dependency Management](https://img.shields.io/david/e0ipso/plugnplay.svg?style=flat-square)](https://david-dm.org/e0ipso/plugnplay)
-[![Node](https://img.shields.io/node/v/plugnplay.svg?style=flat-square)](http://npmjs.com/package/plugnplay)
+[![Coverage Status](https://img.shields.io/coveralls/github/jabuco/plugnplay/master.svg?style=flat-square)](https://coveralls.io/github/jabuco/plugnplay?branch=master)
+[![Last Commit](https://img.shields.io/github/last-commit/jabuco/plugnplay.svg?style=flat-square)](https://github.com/jabuco/plugnplay)
+[![David Dependency Management](https://img.shields.io/david/jabuco/plugnplay.svg?style=flat-square)](https://david-dm.org/jabuco/plugnplay)
+[![Node](https://img.shields.io/node/v/@jabuco/plugnplay.svg?style=flat-square)](http://npmjs.com/package/@jabuco/plugnplay)
 
 ## Summary
+
+> This version contains fixes for windows and has updated dependencies opposed to the original one which seems quite a bit frozen right now.
+
 _Plug'n'Play_ is a simple plugin system that will allow you leverage polymorphism.
 
 **Example 1:** Imagine a service that needs to process some data and store it in S3. The piece that stores the data
@@ -16,7 +18,7 @@ filesystem and another that dumps the data in the console. This way you could us
 files to say:
 
 > OK, run the application locally but don't upload to S3 save to my disk so I can debug
-and inspect the end result.
+> and inspect the end result.
 
 You would only need to change `storePlugin` from `'s3'` to `'disk'`.
 
