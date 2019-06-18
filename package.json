@@ -1,6 +1,6 @@
 {
   "name": "@jabuco/plugnplay",
-  "version": "3.6.0",
+  "version": "3.6.0-beta",
   "description": "Plugin system for reusable code in node.js",
   "main": "index.js",
   "repository": {
