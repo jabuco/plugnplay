@@ -14,9 +14,9 @@ const fs = require('fs');
 const glob = require('glob');
 const md5 = require('md5');
 const path = require('path');
-const PluginLoaderFactory = require('./PluginLoaderFactory');
 const pify = require('pify');
 const yaml = require('js-yaml');
+const PluginLoaderFactory = require('./PluginLoaderFactory');
 
 const readFile = pify(fs.readFile);
 const PLUGNPLAY_FILE = 'plugnplay.yml';
@@ -29,8 +29,11 @@ const PLUGNPLAY_FILE = 'plugnplay.yml';
  */
 class PluginManager implements PluginManagerInterface {
   config: PluginManagerConfig;
+
   registeredDescriptors: Set<PluginDescriptor>;
+
   discovered: boolean;
+
   instances: Map<string, PluginInstance>;
 
   /**
@@ -247,9 +250,9 @@ class PluginManager implements PluginManagerInterface {
         }
         const loader = PluginLoaderFactory.create(descriptor, this, pluginId);
         if (
-          typeof loader._doExport === 'function' &&
-          typeof loader.export === 'function' &&
-          loader.constructor.prototype
+          typeof loader._doExport === 'function'
+          && typeof loader.export === 'function'
+          && loader.constructor.prototype
         ) {
           // Get the object with the actual functionality.
           return loader._doExport(options)
@@ -286,9 +289,9 @@ class PluginManager implements PluginManagerInterface {
     }
     const loader = PluginLoaderFactory.create(descriptor, this, pluginId);
     if (
-      typeof loader._doExportSync !== 'function' ||
-      typeof loader.exportSync !== 'function' ||
-      !loader.constructor.prototype
+      typeof loader._doExportSync !== 'function'
+      || typeof loader.exportSync !== 'function'
+      || !loader.constructor.prototype
     ) {
       let msg = `Unable to find or execute the plugin loader for plugin "${pluginId}"`;
       msg += ` (found ${loader.constructor.name}).`;

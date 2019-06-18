@@ -17,7 +17,9 @@ const _ = require('lodash');
  */
 class PluginLoaderBase implements PluginLoaderInterface {
   manager: PluginManagerInterface;
+
   descriptor: PluginDescriptor;
+
   pluginType: ?PluginInstance;
 
   /**
