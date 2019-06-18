@@ -1,17 +1,16 @@
 {
   "name": "@jabuco/plugnplay",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "description": "Plugin system for reusable code in node.js",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/e0ipso/plugnplay.git"
+    "url": "https://github.com/jabuco/plugnplay.git"
   },
   "author": {
-    "name": "Mateu (e0ipso)",
-    "id": 1140906,
-    "url": "https://github.com/e0ipso",
-    "email": "mateu.aguilo.bosch@gmail.com"
+    "name": "JABUCO",
+    "url": "https://github.com/jabuco",
+    "email": "request@jabuco-it.de"
   },
   "license": "GPL-2.0",
   "engines": {
@@ -19,9 +18,9 @@
   },
   "private": false,
   "bugs": {
-    "url": "https://github.com/e0ipso/plugnplay/issues"
+    "url": "https://github.com/jabuco/plugnplay/issues"
   },
-  "homepage": "https://github.com/e0ipso/plugnplay#readme",
+  "homepage": "https://github.com/jabuco/plugnplay#readme",
   "scripts": {
     "coverage": "istanbul check-coverage --statements 100 --lines 100 --branches 100 --functions 100 **/coverage.json",
     "test": "npm run build && npm run istanbul",
